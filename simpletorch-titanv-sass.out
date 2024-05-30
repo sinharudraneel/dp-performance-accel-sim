@@ -1,0 +1,45 @@
+Calling job_status.py
+Using logfiles ['/root/dp-performance-accel-sim/util/job_launching/../job_launching/logfiles/sim_log.simpletorch-SASS-4.24.05.30-Thursday.txt']
+procman.id	Node                          	App                 	AppArgs             	Version             	Config    	RunningTime    	Mem   	JobStatus                     	Basic GPGPU-Sim Stats
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5         	1cdcb535cc4f                  	simpletorch         	NO_ARGS             	simpletorch.accelsim	TITANV    	              0	0     	RUNNING
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Passed:0/1, No error:0/1, Failed/Error:0/1, Running:1/1, Waiting:0/1
+Sleeping for 30s
+Calling job_status.py
+Using logfiles ['/root/dp-performance-accel-sim/util/job_launching/../job_launching/logfiles/sim_log.simpletorch-SASS-4.24.05.30-Thursday.txt']
+procman.id	Node                          	App                 	AppArgs             	Version             	Config    	RunningTime    	Mem   	JobStatus                     	Basic GPGPU-Sim Stats
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5         	1cdcb535cc4f                  	simpletorch         	NO_ARGS             	simpletorch.accelsim	TITANV    	              0	0     	ABORTED                       	SIMRATE_IPS=635 K	SIM_TIME=2 sec (2 sec)	TOT_IPC=381	TOT_INSN=1 M	TOT_CYCLE=3 K
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+failed job log written to /root/dp-performance-accel-sim/util/job_launching/../job_launching/logfiles/failed_job_log_sim_log.simpletorch-SASS-4.24.05.30-Thursday.txt
+Passed:0/1, No error:0/1, Failed/Error:1/1, Running:0/1, Waiting:0/1
+Contents /root/dp-performance-accel-sim/util/job_launching/../job_launching/logfiles/failed_job_log_sim_log.simpletorch-SASS-4.24.05.30-Thursday.txt:
+5         	1cdcb535cc4f                  	simpletorch         	NO_ARGS             	simpletorch.accelsim	TITANV    	              0	0     	ABORTED                       	SIMRATE_IPS=635 K	SIM_TIME=2 sec (2 sec)	TOT_IPC=381	TOT_INSN=1 M	TOT_CYCLE=3 K	
+
+**********************************************************
+simpletorch-NO_ARGS--TITANV. Status=ABORTED
+Last 10 line of /root/dp-performance-accel-sim/util/job_launching/../../sim_run_11.7/simpletorch/NO_ARGS/TITANV/simpletorch-NO_ARGS.accelsim-commit-dde75dbc7cdd324d78931c367351251d2df31913_modified_0.0.o5
+------------------
+thread block = 0,0,0
+GPGPU-Sim: Reconfigure L1 cache to 120KB
+GPGPU-Sim uArch: Shader 24 bind to kernel 5 '_ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIfNS0_7MeanOpsIffffEEjfLi4EEEEEvT1_'
+launching kernel name: _ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIfNS0_7MeanOpsIffffEEjfLi4EEEEEvT1_ uid: 5
+Header info loaded for kernel command : ./traces/kernel-5.traceg
+-accelsim tracer version = 3
+-nvbit version = 1.5.3
+-local mem base_addr = 0x00007fb055000000
+-shmem base_addr = 0x00007fb057000000
+-cuda stream id = 0
+------------------
+
+Contents of /root/dp-performance-accel-sim/util/job_launching/../../sim_run_11.7/simpletorch/NO_ARGS/TITANV/simpletorch-NO_ARGS.accelsim-commit-dde75dbc7cdd324d78931c367351251d2df31913_modified_0.0.e5
+------------------
+accel-sim.out: shader.cc:3782: void barrier_set_t::deallocate_barrier(unsigned int): Assertion `active.any() == false' failed.
+/root/dp-performance-accel-sim/util/job_launching/../../sim_run_11.7/simpletorch/NO_ARGS/TITANV/slurm.sim: line 52: 18577 Aborted                 (core dumped) /root/dp-performance-accel-sim/util/job_launching/../../sim_run_11.7/gpgpu-sim-builds/accelsim-commit-dde75dbc7cdd324d78931c367351251d2df31913_modified_0.0/accel-sim.out -config ./gpgpusim.config -trace ./traces/kernelslist.g
+
+------------------
+**********************************************************
+
+All 1 Tests Done.
+Something did not pass.
