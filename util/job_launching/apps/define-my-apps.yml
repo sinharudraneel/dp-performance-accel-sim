@@ -1,0 +1,18 @@
+#name_1>:
+#           - args: <commandline arg_list 1> # Leave blank if no arguments
+#             <optional> accel-sim-mem: <xG>
+#           - args: <commandline arg_list 2>
+#           ...
+#       - <exec_name_2>
+#           ...
+#       ...
+# If you have a bunch of random benchmarks in random places, then a "suite" can be just one benchmark
+
+# Rodinia 2.0 implemented with a pass/fail functional test
+simpletorch:
+    exec_dir: "$GPUAPPS_ROOT/bin/$CUDA_VERSION/release/"
+    data_dirs: ""
+    execs:
+        - simpletorch:
+            - args:
+
