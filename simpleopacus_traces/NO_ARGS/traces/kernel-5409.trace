@@ -1,0 +1,63 @@
+-kernel name = _ZN2at6native29vectorized_elementwise_kernelILi4ENS0_11FillFunctorIfEENS_6detail5ArrayIPcLi1EEEEEviT0_T1_
+-kernel id = 5409
+-grid dim = (1,1,1)
+-block dim = (128,1,1)
+-shmem = 0
+-nregs = 14
+-binary version = 70
+-cuda stream id = 0
+-shmem base_addr = 0x00007f045a000000
+-local mem base_addr = 0x00007f0458000000
+-nvbit version = 1.5.3
+-accelsim tracer version = 3
+
+#traces format = threadblock_x threadblock_y threadblock_z warpid_tb PC mask dest_num [reg_dests] opcode src_num [reg_srcs] mem_width [adrrescompress?] [mem_addresses]
+
+0 0 0 0 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 2 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 1 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 3 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 0 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 1 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 3 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 2 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 2 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 1 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 0 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 3 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 3 0030 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 0 0030 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 2 0030 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 1 0030 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 3 0040 ffffffff 1 R4 IADD3 2 R0 R255 0 
+0 0 0 1 0040 ffffffff 1 R4 IADD3 2 R0 R255 0 
+0 0 0 0 0040 ffffffff 1 R4 IADD3 2 R0 R255 0 
+0 0 0 2 0040 ffffffff 1 R4 IADD3 2 R0 R255 0 
+0 0 0 2 0050 ffffffff 0 ISETP.GE.AND 1 R4 0 
+0 0 0 3 0050 ffffffff 0 ISETP.GE.AND 1 R4 0 
+0 0 0 0 0050 ffffffff 0 ISETP.GE.AND 1 R4 0 
+0 0 0 1 0050 ffffffff 0 ISETP.GE.AND 1 R4 0 
+0 0 0 2 0060 ffffffff 0 BRA 0 0 
+0 0 0 1 0060 ffffffff 0 BRA 0 0 
+0 0 0 0 0060 ffffffff 0 BRA 0 0 
+0 0 0 3 0060 ffffffff 0 BRA 0 0 
+0 0 0 2 0110 ffffffff 1 R7 S2R 0 0 
+0 0 0 3 0110 ffffffff 1 R7 S2R 0 0 
+0 0 0 1 0110 ffffffff 1 R7 S2R 0 0 
+0 0 0 0 0110 ffffffff 1 R7 S2R 0 0 
+0 0 0 2 0120 ffffffff 0 ISETP.GE.AND 2 R7 R4 0 
+0 0 0 1 0120 ffffffff 0 ISETP.GE.AND 2 R7 R4 0 
+0 0 0 3 0120 ffffffff 0 ISETP.GE.AND 2 R7 R4 0 
+0 0 0 0 0120 ffffffff 0 ISETP.GE.AND 2 R7 R4 0 
+0 0 0 3 0130 ffffffff 0 EXIT 0 0 
+0 0 0 2 0130 ffffffff 0 EXIT 0 0 
+0 0 0 0 0130 fffffff8 0 EXIT 0 0 
+0 0 0 1 0130 ffffffff 0 EXIT 0 0 
+0 0 0 0 0140 00000007 1 R5 IADD3 2 R7 R255 0 
+0 0 0 0 0150 00000007 1 R6 IMAD.IADD 2 R0 R7 0 
+0 0 0 0 0160 00000007 1 R9 MOV 0 0 
+0 0 0 0 0170 00000007 1 R11 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 0 0180 00000007 0 ISETP.GE.AND 2 R5 R4 0 
+0 0 0 0 0190 00000007 1 R2 IMAD.WIDE.U32 2 R6 R9 0 
+0 0 0 0 01a0 00000007 0 STG.E.SYS 2 R2 R11 4 1 0x7f03b6601600 4 
+0 0 0 0 01b0 00000007 0 EXIT 0 0 

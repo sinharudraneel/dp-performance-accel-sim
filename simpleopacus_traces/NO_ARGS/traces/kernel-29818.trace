@@ -1,0 +1,197 @@
+-kernel name = _ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_22reciprocal_kernel_cudaERNS_18TensorIteratorBaseEENKUlvE_clEvENKUlvE0_clEvEUlfE_NS_6detail5ArrayIPcLi2EEEEEviT0_T1_
+-kernel id = 29818
+-grid dim = (1,1,1)
+-block dim = (128,1,1)
+-shmem = 0
+-nregs = 24
+-binary version = 70
+-cuda stream id = 0
+-shmem base_addr = 0x00007f045a000000
+-local mem base_addr = 0x00007f0458000000
+-nvbit version = 1.5.3
+-accelsim tracer version = 3
+
+#traces format = threadblock_x threadblock_y threadblock_z warpid_tb PC mask dest_num [reg_dests] opcode src_num [reg_srcs] mem_width [adrrescompress?] [mem_addresses]
+
+0 0 0 0 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 2 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 1 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 3 0000 ffffffff 1 R1 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 2 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 1 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 3 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 0 0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0 0 0 3 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 2 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 1 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 0 0020 ffffffff 1 R0 S2R 0 0 
+0 0 0 3 0030 ffffffff 1 R4 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 2 0030 ffffffff 1 R4 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 0 0030 ffffffff 1 R4 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 1 0030 ffffffff 1 R4 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 2 0040 ffffffff 1 R8 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 3 0040 ffffffff 1 R8 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 0 0040 ffffffff 1 R8 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 1 0040 ffffffff 1 R8 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 2 0050 ffffffff 1 R7 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 0 0050 ffffffff 1 R7 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 1 0050 ffffffff 1 R7 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 3 0050 ffffffff 1 R7 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 2 0060 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 3 0060 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 0 0060 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 1 0060 ffffffff 1 R0 IMAD.SHL.U32 2 R0 R255 0 
+0 0 0 2 0070 ffffffff 1 R6 IADD3 2 R0 R255 0 
+0 0 0 0 0070 ffffffff 1 R6 IADD3 2 R0 R255 0 
+0 0 0 3 0070 ffffffff 1 R6 IADD3 2 R0 R255 0 
+0 0 0 1 0070 ffffffff 1 R6 IADD3 2 R0 R255 0 
+0 0 0 2 0080 ffffffff 0 ISETP.GE.AND 1 R6 0 
+0 0 0 0 0080 ffffffff 0 ISETP.GE.AND 1 R6 0 
+0 0 0 3 0080 ffffffff 0 ISETP.GE.AND 1 R6 0 
+0 0 0 1 0080 ffffffff 0 ISETP.GE.AND 1 R6 0 
+0 0 0 1 0090 ffffffff 0 BRA 0 0 
+0 0 0 0 0090 ffffffff 0 BRA 0 0 
+0 0 0 2 0090 ffffffff 0 BRA 0 0 
+0 0 0 3 0090 ffffffff 0 BRA 0 0 
+0 0 0 3 0530 ffffffff 1 R5 S2R 0 0 
+0 0 0 0 0530 ffffffff 1 R5 S2R 0 0 
+0 0 0 2 0530 ffffffff 1 R5 S2R 0 0 
+0 0 0 1 0530 ffffffff 1 R5 S2R 0 0 
+0 0 0 2 0540 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 3 0540 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 1 0540 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 0540 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 0550 ffffffff 0 BSSY 0 0 
+0 0 0 1 0550 ffffffff 0 BSSY 0 0 
+0 0 0 3 0550 ffffffff 0 BSSY 0 0 
+0 0 0 2 0550 ffffffff 0 BSSY 0 0 
+0 0 0 3 0560 ffffffff 1 R10 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 2 0560 ffffffff 1 R10 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 0 0560 ffffffff 1 R10 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 1 0560 ffffffff 1 R10 IMAD.MOV.U32 3 R255 R255 R255 0 
+0 0 0 0 0570 ffffffff 0 ISETP.GE.AND 2 R5 R6 0 
+0 0 0 3 0570 ffffffff 0 ISETP.GE.AND 2 R5 R6 0 
+0 0 0 1 0570 ffffffff 0 ISETP.GE.AND 2 R5 R6 0 
+0 0 0 2 0570 ffffffff 0 ISETP.GE.AND 2 R5 R6 0 
+0 0 0 3 0580 ffffffff 0 BRA 0 0 
+0 0 0 1 0580 ffffffff 0 BRA 0 0 
+0 0 0 2 0580 ffffffff 0 BRA 0 0 
+0 0 0 0 0580 ffff8000 0 BRA 0 0 
+0 0 0 0 0590 00007fff 1 R2 IMAD.IADD 2 R0 R5 0 
+0 0 0 1 06e0 ffffffff 0 BSYNC 0 0 
+0 0 0 3 06e0 ffffffff 0 BSYNC 0 0 
+0 0 0 2 06e0 ffffffff 0 BSYNC 0 0 
+0 0 0 2 06f0 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 3 06f0 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 05a0 00007fff 1 R11 IMAD.MOV.U32 2 R255 R255 0 
+0 0 0 1 06f0 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 3 0700 ffffffff 0 BSSY 0 0 
+0 0 0 0 05b0 00007fff 1 R2 IMAD.WIDE.U32 2 R2 R11 0 
+0 0 0 1 0700 ffffffff 0 BSSY 0 0 
+0 0 0 2 0700 ffffffff 0 BSSY 0 0 
+0 0 0 3 0710 ffffffff 0 BRA 0 0 
+0 0 0 2 0710 ffffffff 0 BRA 0 0 
+0 0 0 1 0710 ffffffff 0 BRA 0 0 
+0 0 0 0 05c0 00007fff 1 R10 LDG.E.SYS 1 R2 4 1 0x7f03b6601c00 4 
+0 0 0 2 07f0 ffffffff 0 BSYNC 0 0 
+0 0 0 3 07f0 ffffffff 0 BSYNC 0 0 
+0 0 0 1 07f0 ffffffff 0 BSYNC 0 0 
+0 0 0 0 05d0 00007fff 1 R9 IADD3 2 R5 R255 0 
+0 0 0 2 0800 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 3 0800 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 1 0800 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 0 05e0 00007fff 0 ISETP.GE.AND 2 R9 R6 0 
+0 0 0 2 0810 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 3 0810 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 1 0810 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 05f0 00007fff 0 BRA 0 0 
+0 0 0 2 0820 ffffffff 0 BSSY 0 0 
+0 0 0 3 0820 ffffffff 0 BSSY 0 0 
+0 0 0 1 0820 ffffffff 0 BSSY 0 0 
+0 0 0 2 0830 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 0 06e0 00007fff 0 BSYNC 0 0 
+0 0 0 3 0830 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 1 0830 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 0 06e0 ffff8000 0 BSYNC 0 0 
+0 0 0 3 0840 ffffffff 0 BRA 0 0 
+0 0 0 2 0840 ffffffff 0 BRA 0 0 
+0 0 0 1 0840 ffffffff 0 BRA 0 0 
+0 0 0 3 0920 ffffffff 0 BSYNC 0 0 
+0 0 0 2 0920 ffffffff 0 BSYNC 0 0 
+0 0 0 0 06f0 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 3 0930 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 1 0920 ffffffff 0 BSYNC 0 0 
+0 0 0 0 0700 ffffffff 0 BSSY 0 0 
+0 0 0 2 0930 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 3 0940 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 1 0930 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 2 0940 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 0710 ffff8000 0 BRA 0 0 
+0 0 0 3 0950 ffffffff 0 BSSY 0 0 
+0 0 0 1 0940 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 0720 00007fff 1 R2 IADD3 2 R10 R255 0 
+0 0 0 2 0950 ffffffff 0 BSSY 0 0 
+0 0 0 3 0960 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 1 0950 ffffffff 0 BSSY 0 0 
+0 0 0 0 0730 00007fff 1 R2 LOP3.LUT 2 R2 R255 0 
+0 0 0 2 0960 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 3 0970 ffffffff 0 BRA 0 0 
+0 0 0 1 0960 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 2 0970 ffffffff 0 BRA 0 0 
+0 0 0 0 0740 00007fff 0 ISETP.GT.U32.AND 1 R2 0 
+0 0 0 3 0a50 ffffffff 0 BSYNC 0 0 
+0 0 0 1 0970 ffffffff 0 BRA 0 0 
+0 0 0 0 0750 00007fff 0 BRA 0 0 
+0 0 0 3 0a60 ffffffff 1 R11 IADD3 2 R5 R255 0 
+0 0 0 2 0a50 ffffffff 0 BSYNC 0 0 
+0 0 0 1 0a50 ffffffff 0 BSYNC 0 0 
+0 0 0 3 0a70 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 07b0 00007fff 1 R9 MUFU.RCP 1 R10 0 
+0 0 0 2 0a60 ffffffff 1 R11 IADD3 2 R5 R255 0 
+0 0 0 1 0a60 ffffffff 1 R11 IADD3 2 R5 R255 0 
+0 0 0 2 0a70 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 3 0a80 ffffffff 0 BSSY 0 0 
+0 0 0 0 07c0 00007fff 1 R2 FFMA 2 R9 R10 0 
+0 0 0 3 0a90 ffffffff 0 ISETP.GE.AND 2 R11 R6 0 
+0 0 0 1 0a70 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 07d0 00007fff 1 R2 FADD.FTZ 2 R2 R255 0 
+0 0 0 2 0a80 ffffffff 0 BSSY 0 0 
+0 0 0 3 0aa0 ffffffff 0 BRA 0 0 
+0 0 0 0 07e0 00007fff 1 R9 FFMA 3 R9 R2 R9 0 
+0 0 0 1 0a80 ffffffff 0 BSSY 0 0 
+0 0 0 2 0a90 ffffffff 0 ISETP.GE.AND 2 R11 R6 0 
+0 0 0 2 0aa0 ffffffff 0 BRA 0 0 
+0 0 0 3 0b80 ffffffff 0 BSYNC 0 0 
+0 0 0 0 07f0 00007fff 0 BSYNC 0 0 
+0 0 0 1 0a90 ffffffff 0 ISETP.GE.AND 2 R11 R6 0 
+0 0 0 0 07f0 ffff8000 0 BSYNC 0 0 
+0 0 0 1 0aa0 ffffffff 0 BRA 0 0 
+0 0 0 3 0b90 ffffffff 0 EXIT 0 0 
+0 0 0 2 0b80 ffffffff 0 BSYNC 0 0 
+0 0 0 1 0b80 ffffffff 0 BSYNC 0 0 
+0 0 0 2 0b90 ffffffff 0 EXIT 0 0 
+0 0 0 0 0800 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 0 0810 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 1 0b90 ffffffff 0 EXIT 0 0 
+0 0 0 0 0820 ffffffff 0 BSSY 0 0 
+0 0 0 0 0830 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 0 0840 ffffffff 0 BRA 0 0 
+0 0 0 0 0920 ffffffff 0 BSYNC 0 0 
+0 0 0 0 0930 ffffffff 1 R3 IADD3 2 R5 R255 0 
+0 0 0 0 0940 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 0950 ffffffff 0 BSSY 0 0 
+0 0 0 0 0960 ffffffff 0 ISETP.GE.AND 2 R3 R6 0 
+0 0 0 0 0970 ffffffff 0 BRA 0 0 
+0 0 0 0 0a50 ffffffff 0 BSYNC 0 0 
+0 0 0 0 0a60 ffffffff 1 R11 IADD3 2 R5 R255 0 
+0 0 0 0 0a70 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0 0 0 0 0a80 ffffffff 0 BSSY 0 0 
+0 0 0 0 0a90 ffffffff 0 ISETP.GE.AND 2 R11 R6 0 
+0 0 0 0 0aa0 ffffffff 0 BRA 0 0 
+0 0 0 0 0b80 ffffffff 0 BSYNC 0 0 
+0 0 0 0 0b90 ffff8000 0 EXIT 0 0 
+0 0 0 0 0ba0 00007fff 1 R15 MOV 0 0 
+0 0 0 0 0bb0 00007fff 1 R5 IMAD.IADD 2 R0 R5 0 
+0 0 0 0 0bc0 00007fff 1 R2 IMAD.WIDE.U32 2 R5 R15 0 
+0 0 0 0 0bd0 00007fff 0 STG.E.SYS 2 R2 R9 4 1 0x7f03b6602000 4 
+0 0 0 0 0be0 00007fff 0 EXIT 0 0 

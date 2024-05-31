@@ -1,0 +1,124 @@
+-kernel name = _ZN2at6native18elementwise_kernelILi128ELi2EZNS0_22gpu_kernel_impl_nocastINS0_13BinaryFunctorIfffNS0_15binary_internal10MulFunctorIfEEEEEEvRNS_18TensorIteratorBaseERKT_EUliE_EEviT1_
+-kernel id = 6057
+-grid dim = (1,1,1)
+-block dim = (128,1,1)
+-shmem = 0
+-nregs = 14
+-binary version = 70
+-cuda stream id = 0
+-shmem base_addr = 0x00007f045a000000
+-local mem base_addr = 0x00007f0458000000
+-nvbit version = 1.5.3
+-accelsim tracer version = 3
+
+#traces format = threadblock_x threadblock_y threadblock_z warpid_tb PC mask dest_num [reg_dests] opcode src_num [reg_srcs] mem_width [adrrescompress?] [mem_addresses]
+
+
+
+#BEGIN_TB
+
+thread block = 0,0,0
+
+warp = 0
+insts = 51
+0000 ffffffff 1 R1 MOV 0 0 
+0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0020 ffffffff 1 R0 S2R 0 0 
+0030 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0040 ffffffff 0 BSSY 0 0 
+0050 ffffffff 1 R3 S2R 0 0 
+0060 ffffffff 1 R0 LEA 2 R0 R3 0 
+0070 ffffffff 0 ISETP.GE.AND 1 R0 0 
+0080 ffffffff 1 R9 MOV 1 R0 0 
+0090 ffff8000 0 BRA 0 0 
+00a0 00007fff 0 ISETP.NE.AND 1 R255 0 
+00b0 00007fff 1 R2 CS2R 0 0 
+00c0 00007fff 1 R4 MOV 1 R255 0 
+00d0 00000000 0 BRA 0 0 
+00e0 00007fff 1 R2 MOV 1 R255 0 
+00f0 00007fff 1 R3 MOV 1 R9 0 
+0100 00007fff 1 R5 MOV 0 0 
+0110 00007fff 1 R2 IMAD.WIDE.U32 2 R9 R2 0 
+0120 00007fff 0 ISETP.NE.AND 1 R5 0 
+0130 00007fff 1 R7 SHF.R.U32.HI 2 R255 R3 0 
+0140 00007fff 1 R4 IADD3 3 R7 R255 R255 0 
+0150 00007fff 1 R4 IMAD 2 R4 R9 0 
+0160 00007fff 1 R2 IMAD 2 R4 R255 0 
+0170 00007fff 1 R3 IMAD 2 R4 R255 0 
+0180 00007fff 1 R4 IMAD 2 R4 R255 0 
+0190 00000000 0 BRA 0 0 
+01a0 00007fff 1 R6 MOV 1 R255 0 
+01b0 00007fff 0 ISETP.NE.AND 1 R5 0 
+01c0 00007fff 1 R8 IMAD.WIDE.U32 2 R7 R6 0 
+01d0 00007fff 1 R9 SHF.R.U32.HI 2 R255 R9 0 
+01e0 00007fff 1 R6 IADD3 3 R9 R255 R255 0 
+01f0 00007fff 1 R7 IMAD 2 R6 R7 0 
+0200 00007fff 1 R2 IMAD 2 R7 R2 0 
+0210 00007fff 1 R3 IMAD 2 R7 R3 0 
+0220 00007fff 1 R4 IMAD 2 R7 R4 0 
+0230 00007fff 0 BRA 0 0 
+1070 00007fff 1 R4 IADD3 2 R4 R255 0 
+1080 00007fff 1 R6 IADD3 2 R3 R255 0 
+1090 00007fff 1 R5 IADD3.X 2 R255 R255 0 
+10a0 00007fff 1 R7 IADD3.X 2 R255 R255 0 
+10b0 00007fff 1 R4 LDG.E.SYS 1 R4 4 2 0x7f03b6602000 0 0 4 0 0 4 0 0 4 0 0 4 0 0 
+10c0 00007fff 1 R7 LDG.E.SYS 1 R6 4 1 0x7f03b6600e00 4 
+10d0 00007fff 1 R2 IADD3 2 R2 R255 0 
+10e0 00007fff 1 R9 IADD3 2 R0 R255 0 
+10f0 00007fff 1 R3 IADD3.X 2 R255 R255 0 
+1100 00007fff 1 R11 FMUL 2 R4 R7 0 
+1110 00007fff 0 STG.E.SYS 2 R2 R11 4 1 0x7f03b6602200 4 
+1120 00007fff 0 BSYNC 0 0 
+1120 ffff8000 0 BSYNC 0 0 
+1130 ffffffff 0 ISETP.GE.AND 1 R9 0 
+1140 ffffffff 0 EXIT 0 0 
+
+warp = 1
+insts = 13
+0000 ffffffff 1 R1 MOV 0 0 
+0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0020 ffffffff 1 R0 S2R 0 0 
+0030 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0040 ffffffff 0 BSSY 0 0 
+0050 ffffffff 1 R3 S2R 0 0 
+0060 ffffffff 1 R0 LEA 2 R0 R3 0 
+0070 ffffffff 0 ISETP.GE.AND 1 R0 0 
+0080 ffffffff 1 R9 MOV 1 R0 0 
+0090 ffffffff 0 BRA 0 0 
+1120 ffffffff 0 BSYNC 0 0 
+1130 ffffffff 0 ISETP.GE.AND 1 R9 0 
+1140 ffffffff 0 EXIT 0 0 
+
+warp = 2
+insts = 13
+0000 ffffffff 1 R1 MOV 0 0 
+0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0020 ffffffff 1 R0 S2R 0 0 
+0030 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0040 ffffffff 0 BSSY 0 0 
+0050 ffffffff 1 R3 S2R 0 0 
+0060 ffffffff 1 R0 LEA 2 R0 R3 0 
+0070 ffffffff 0 ISETP.GE.AND 1 R0 0 
+0080 ffffffff 1 R9 MOV 1 R0 0 
+0090 ffffffff 0 BRA 0 0 
+1120 ffffffff 0 BSYNC 0 0 
+1130 ffffffff 0 ISETP.GE.AND 1 R9 0 
+1140 ffffffff 0 EXIT 0 0 
+
+warp = 3
+insts = 13
+0000 ffffffff 1 R1 MOV 0 0 
+0010 00000000 0 SHFL.IDX 4 R255 R255 R255 R255 0 
+0020 ffffffff 1 R0 S2R 0 0 
+0030 ffffffff 1 R255 BMOV.32.CLEAR 0 0 
+0040 ffffffff 0 BSSY 0 0 
+0050 ffffffff 1 R3 S2R 0 0 
+0060 ffffffff 1 R0 LEA 2 R0 R3 0 
+0070 ffffffff 0 ISETP.GE.AND 1 R0 0 
+0080 ffffffff 1 R9 MOV 1 R0 0 
+0090 ffffffff 0 BRA 0 0 
+1120 ffffffff 0 BSYNC 0 0 
+1130 ffffffff 0 ISETP.GE.AND 1 R9 0 
+1140 ffffffff 0 EXIT 0 0 
+
+#END_TB
